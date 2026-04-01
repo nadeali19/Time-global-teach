@@ -57,18 +57,72 @@
     <script type="text/javascript" src="js/lottie.js"></script>
     <style>
         body {
-            overflow-y: scroll !important;
-            height: auto !important;
+            overflow: hidden !important;
+            height: 100vh !important;
+            background: #000;
+        }
+
+        @media (max-width: 991px) {
+            body {
+                overflow: auto !important;
+                height: auto !important;
+            }
         }
 
         #animation-container {
             position: absolute;
+            display: none;
         }
 
         #animation-container svg {
             bottom: 4vh;
             position: relative;
             z-index: 1;
+        }
+
+        .team-display-section {
+            display: block !important;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        @media (max-width: 991px) {
+            body {
+                overflow: auto !important;
+                height: auto !important;
+            }
+            .team-display-section {
+                position: relative !important;
+                height: auto !important;
+                overflow: hidden !important; /* Limit extra scroll */
+            }
+        }
+
+        .team-display-section img {
+            width: 80%;
+            height: 80vh;
+            object-fit: contain;
+            background: #000;
+            margin: auto;
+            display: block;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        @media (max-width: 991px) {
+            .team-display-section img {
+                width: 100% !important;
+                height: auto !important;
+                position: static !important;
+                transform: none !important;
+                margin-bottom: 0 !important; /* Removed extra height */
+            }
         }
 
         .banner {
@@ -227,6 +281,32 @@
 
             }
         }
+
+        .footer {
+             font-size: 0.9rem; /* Reduced base font size */
+         }
+ 
+         .footer .social li a {
+             color: #fff !important; /* Set to white as requested */
+             font-size: 18px; /* Reduced icon size */
+             text-decoration: none;
+         }
+ 
+         .footer .copyright-footer p, 
+         .footer .dev-mark span, 
+         .footer .dev-mark a {
+             font-size: 0.8rem;
+             color: #fff !important;
+         }
+ 
+         @media (max-width: 991px) {
+             .footer .social li a {
+                 font-size: 22px !important; /* Reduced icons for mobile */
+             }
+             .footer .social li a[href*="contact.html"] {
+                 font-size: 18px !important;
+             }
+         }
     </style>
 </head>
 
@@ -254,73 +334,26 @@
         
     </div>
 
-    <section class="container banner mb-5 p-2">
-        <section class="row">
-            <section class="col-lg-5 m-auto text-center ">
-                <div class="team-heading"
-                    style="position: relative; top: 0px !important; text-align: center !important;">
-                    <h1 style="font-size: 30px !important;">OUR PEOPLE</h1>
-                    <br>
-                    <!-- <hr class="hr-1" />
-                        <hr class="hr-2" /> -->
-                </div>
+    <section class="container-fluid team-display-section p-0">
+        <section class="row no-gutters h-100">
+            <section class="col-12 text-center d-none d-md-block h-100" data-aos="fadeIn" data-aos-duration="1000">
+                <!-- Desktop view: Shown as fixed background -->
+                <img src="images/team_picture/WW-Website%20Desktop%20View.png" alt="Our Team">
             </section>
-        </section>
-        <br>
-        <se ction class="row m-auto">
-            <section class="col-lg-4 m-auto col-box" data-aos="fadeIn" data-aos-duration="400" data-aos-delay="500"
-                data-aos-easing="ease-out">
+            <section class="col-12 text-center d-block d-md-none" data-aos="fadeIn" data-aos-duration="1000">
+                <!-- Mobile View 1: Shown at the top -->
+                <img src="images/team_picture/WW-Website%20Mobile%20View%201-2.jpg" class="img-fluid" alt="Our Team Members 1">
 
-                <img src="images/team_picture/01.png" class=" m-auto team-pic" style=" filter:drop-shadow(0 0 10px #00BAD5);" alt="">
-
-
+                <!-- Mobile View 2: Shown below the first image -->
+                <img src="images/team_picture/WW-Website%20Mobile%20View%202-2.jpg" class="img-fluid" alt="Our Team Members 2">
             </section>
-            <section class="col-lg-4 m-auto col-box" data-aos="fadeIn" data-aos-duration="400" data-aos-delay="500"
-                data-aos-easing="ease-out">
-                <img src="images/team_picture/02.png" class="m-auto team-pic" style=" filter:drop-shadow(0 0 10px #00BAD5);" alt="">
-            </section>
-            <!-- <section class="col-lg-4 m-auto col-box" data-aos="fadeIn" data-aos-duration="400" data-aos-delay="500"
-                data-aos-easing="ease-out">
-                <img src="images/3.png" class="m-auto team-pic" style=" filter:drop-shadow(0 0 10px #00BAD5);" alt="">
-            </section> -->
-            <!-- Update by TG SF -->
-            <section class="col-lg-4 m-auto col-box" data-aos="fadeIn" data-aos-duration="400" data-aos-delay="500"
-                data-aos-easing="ease-out">
-                <img src="images/team_picture/03.png" class="m-auto team-pic" style=" filter:drop-shadow(0 0 10px #00BAD5);" alt="">
-            </section>
-            <section class="col-lg-4 m-auto col-box" data-aos="fadeIn" data-aos-duration="400" data-aos-delay="500"
-                data-aos-easing="ease-out">
-                <img src="images/team_picture/04.png" class="m-auto team-pic" style=" filter:drop-shadow(0 0 10px #00BAD5);" alt="">
-            </section>
-            <section class="col-lg-4 m-auto col-box" data-aos="fadeIn" data-aos-duration="400" data-aos-delay="500"
-                data-aos-easing="ease-out">
-                <img src="images/team_picture/05.png" class="m-auto team-pic" style=" filter:drop-shadow(0 0 10px #00BAD5);" alt="">
-            </section>
-            <section class="col-lg-4 m-auto col-box" data-aos="fadeIn" data-aos-duration="400" data-aos-delay="500"
-                data-aos-easing="ease-out">
-                <img src="images/team_picture/06.png" class="m-auto team-pic" style=" filter:drop-shadow(0 0 10px #00BAD5);" alt="">
-            </section>
-            <section class="col-lg-4 m-auto col-box" data-aos="fadeIn" data-aos-duration="400" data-aos-delay="500"
-                data-aos-easing="ease-out">
-                <img src="images/team_picture/07.png" class="m-auto team-pic" style=" filter:drop-shadow(0 0 10px #00BAD5);" alt="">
-            </section>
-            <section class="col-lg-4 m-auto col-box" data-aos="fadeIn" data-aos-duration="400" data-aos-delay="500"
-                data-aos-easing="ease-out">
-                <img src="images/team_picture/08.png" class="m-auto team-pic" style=" filter:drop-shadow(0 0 10px #00BAD5);" alt="">
-            </section>
-            <!-- Update by TG SF End -->
         </section>
     </section>
 
     <div id="header">
         <header>
             <div class="container">
-                <div class="logo" data-aos="fade-down" data-aos-duration="1500" data-aos-delay="1500">
-                    <a href="index.html">
-                        <img src="images/logo.png" alt="WONDERWORKS" />
-
-                    </a>
-                </div>
+                <!-- Header logo removed as requested -->
                 <div id="menushow" class="mobile-menu" data-aos="fade" data-aos-duration="1500" data-aos-delay="2000">
                     <img src="images/icon1.png" onclick="menushow()" alt="dots" />
                 </div>
@@ -329,13 +362,7 @@
                     <img src="images/icon2.png" onclick="menuhide()" alt="dots" />
                 </div>
                 <br>
-                <div class="team-heading head1 text-center" data-aos="fade-down" data-aos-duration="1800"
-                    data-aos-delay="1500" style="margin-left: 50%; transform: translate(-50%);">
-
-                    <h1>OUR PEOPLE</h1>
-                    <!-- <hr class="hr-1" />
-                        <hr class="hr-2" /> -->
-                </div>
+                <!-- Heading removed as it is already in the image -->
             </div>
         </header>
     </div>
@@ -403,26 +430,24 @@
         </div>
 
         <!------------Navbar----------->
-        <div class="bottom-row text-center " style="width: 100% !important;">
+        <div class="bottom-row text-center d-flex align-items-center justify-content-center flex-wrap" style="width: 100% !important; bottom: 40px !important;">
 
-            <a class="primary-button "
-                style="margin-left: 50%; transform: translate(-75%); position: relative; top: 10px; "
+            <a class="primary-button mx-3"
+                style="position: relative; top: 0;"
                 href="contact.html">
                 Let's Talk!
             </a>
 
-            <br>
-
-            <section>
-                <a style="color: gray; font-size: 20px; " class="icon-fb m-3"
+            <section class="d-flex align-items-center">
+                <a style="color: gray; font-size: 20px; " class="icon-fb m-2"
                     href="https://www.facebook.com/Wonder-Works-111449293896371" target="_blank"></a>
 
 
-                <a style="color: gray; font-size: 20px; " class="icon-in m-3"
+                <a style="color: gray; font-size: 20px; " class="icon-in m-2"
                     href="https://www.instagram.com/wonderworksuae/?igshid=1aju2nsw2a1a3" target="_blank"></a>
 
 
-                <a style="color: gray; font-size: 20px; " class="icon-ld m-3"
+                <a style="color: gray; font-size: 20px; " class="icon-ld m-2"
                     href="https://www.linkedin.com/company/wonder-works-event-management-llc" target="_blank"></a>
 
             </section>
@@ -499,11 +524,9 @@
                 <div class="row">
                     <div class="col-xs-6 col left">
                         <ul class="copyright-footer">
-                            <li>
-                                <a href="contact.html">Let's Talk</a>
-                            </li>
+
                             <!--                    <li><a>Privacy policy</a></li>-->
-                            <p>&copy; 2023 Wonder Works</p>
+                            <p>&copy; 2026 Wonder Works</p>
                         </ul>
                     </div>
                     <div class="dev-mark">
@@ -513,6 +536,9 @@
                     </div>
                     <div class="col-xs-6 col right">
                         <ul class="list-inline social">
+                            <li>
+                                <a href="contact.html">Let's Talk</a>
+                            </li>
                             <li>
                                 <a class="icon-fb footer-icons"
                                     href="https://www.facebook.com/Wonder-Works-111449293896371" target="_blank"></a>
@@ -528,9 +554,6 @@
                                     target="_blank"></a>
                             </li>
                         </ul>
-                        <!--                <a class="tentwenty" href="https://tentwenty.me" target="_blank"> <img src="-->
-                        <!--/dist/images/tentwenty.png" alt="-->
-                        <!--"/></a>-->
                     </div>
                 </div>
             </div>

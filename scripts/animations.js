@@ -103,65 +103,28 @@
 //   }
 // }
 
-var designContainer = document.getElementById("design-animation-container"),
-  designAnim = lottie.loadAnimation({
-    container: designContainer,
-    renderer: "svg",
-    loop: true,
-    autoplay: false,
-    path: "js/indexPage/We_Design.json",
-  });
-console.log(designAnim);
-designAnim.addEventListener("enterFrame", function (animation) {
-  if (animation.currentTime > designAnim.totalFrames - 1) {
-    designAnim.pause();
-  }
-});
+/* 
+Lottie animation JSON files are missing. Commenting out to avoid 404 errors.
+*/
 
-var buildContainer = document.getElementById("build-animation-container"),
-  buildAnim = lottie.loadAnimation({
-    container: buildContainer,
-    renderer: "svg",
-    loop: true,
-    autoplay: false,
-    path: "js/indexPage/We_Build.json",
-  });
+var designContainer = document.getElementById("design-animation-container");
+var buildContainer = document.getElementById("build-animation-container");
+var deliverContainer = document.getElementById("deliver-animation-container");
 
-buildAnim.addEventListener("enterFrame", function (animation) {
-  if (animation.currentTime > buildAnim.totalFrames - 1) {
-    buildAnim.pause();
-  }
-});
-
-var deliverContainer = document.getElementById("deliver-animation-container"),
-  deliverAnim = lottie.loadAnimation({
-    container: deliverContainer,
-    renderer: "svg",
-    loop: true,
-    autoplay: true,
-    path: "js/indexPage/We_Deliver.json",
-  });
-
-deliverAnim.addEventListener("enterFrame", function (animation) {
-  if (animation.currentTime > deliverAnim.totalFrames - 1) {
-    deliverAnim.pause();
-  }
-});
+// Dummy objects to prevent errors
+var designAnim = { play: function(){}, stop: function(){}, pause: function(){} };
+var buildAnim = { play: function(){}, stop: function(){}, pause: function(){} };
+var deliverAnim = { play: function(){}, stop: function(){}, pause: function(){} };
 
 var homeLoader = $("#loader");
 if (homeLoader.length) {
   var element = document.getElementById("container-intro");
+  // Check if data.json exists or just bypass for now to allow site to load
+  loadingout(); 
+  /*
   var animation = lottie.loadAnimation({
-    container: element, // the dom element that will contain the animation
-    renderer: "svg",
-    loop: false,
-    autoplay: true,
-    prerender: true,
-    path: "js/data.json", // the path to the animation json
-  });
-  animation.addEventListener("complete", function () {
-    loadingout();
-  });
+    ...
+  */
 }
 var fullpageblock = $("#fullpage");
 if (fullpageblock.length) {
