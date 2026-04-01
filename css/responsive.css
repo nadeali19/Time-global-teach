@@ -1,0 +1,662 @@
+        /* Smartphones (portrait and landscape) ----------- */
+        
+        @media only screen and (max-height: 750px) {
+            .project-listing-block .swiper-container {
+                /* padding-top: 310px !important; */
+                /* height: 87.5vh; */
+            }
+            .project-listing-block .swiper-container .item .info h5 {
+                margin: 0px !important;
+            }
+            .project-listing-block .title h1 {
+                line-height: 0;
+            }
+            .swiper-grid li h5 {
+                line-height: 2.8rem !important;
+            }
+        }
+        
+        @media only screen and (max-height: 850px) {
+            .project-listing-block .swiper-container {
+                /* height: 87.5vh; */
+                position: absolute;
+                z-index: 9;
+                top: 0;
+                /* padding-top: 380px !important; */
+                overflow: visible;
+            }
+            .swiper-grid li h5 {
+                line-height: 2.8rem !important;
+            }
+        }
+        
+        @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+            html {
+                font-size: 6px !important;
+            }
+            body {
+                overflow-y: scroll;
+            }
+            .container-intro {
+                position: absolute;
+                top: 50vh;
+                transform: translateY(-50%);
+            }
+            .contact-container {
+                height: 1120px !important;
+                -ms-grid-columns: 1fr;
+                grid-template-columns: 1fr;
+                -ms-grid-rows: 5fr 5fr 2fr !important;
+                grid-template-rows: 5fr 5fr !important;
+            }
+            .contact-form-container {
+                height: 600px !important;
+                grid-column: 1/2 !important;
+                grid-row: 1/2 !important;
+            }
+            .contact-container .contact-form-container .form-container {
+                width: 90%;
+                height: 90%;
+                position: relative;
+                top: 20%;
+                left: 5%;
+            }
+            .column-right {
+                height: 600px !important;
+                grid-column: 1/2 !important;
+                grid-row: 2/3 !important;
+            }
+            .contact-container .footer {
+                grid-column: 1/2;
+                grid-row: 3/4;
+            }
+            .team-container {
+                height: 85vh;
+                grid-template-columns: 1fr;
+                grid-template-rows: 80px 1fr 1fr;
+            }
+            .team-container .team-heading {
+                grid-column: 1/2;
+                grid-row: 1/2;
+                text-align: center;
+                padding-top: 16rem;
+            }
+            .team-container .team-heading h1 {
+                top: 80%;
+            }
+            .team-container .team-people {
+                grid-column: 1/2;
+                grid-row: 2/3;
+                display: grid;
+                grid-template-columns: 1fr !important;
+                grid-template-rows: 1fr 0.7fr 1fr;
+                padding-top: 5rem;
+            }
+            .team-container .footer {
+                grid-column: 1/6;
+                grid-row: 4/5 !important;
+            }
+            .team-container .team-people .people-container {
+                height: 95%;
+            }
+            .team-people .card .card-body .card-title {
+                margin-bottom: 2rem;
+                font-size: 4rem;
+                font-weight: 900;
+            }
+            .team-people .card .card-body .card-text {
+                font-size: 2rem;
+            }
+            .team-container .card .card-body .card-text span {
+                font-size: 3rem;
+            }
+            .svg-block #text-canvas {
+                width: 30rem !important;
+            }
+            .slide-text2 h1 {
+                font-size: 8rem;
+            }
+            .slide-text h1 {
+                font-size: 7rem !important;
+            }
+            .revealbox h1 {
+                font-size: 4.5rem !important;
+            }
+            #section3 .layer {
+                width: 90% !important;
+                height: 22rem;
+            }
+            #section3 .social {
+                /* margin: 0 3rem !important; */
+            }
+            .slide-text {
+                padding: 1.1rem;
+            }
+            .nav-block li {
+                padding: 8px 70px;
+            }
+            .project-listing-block .swiper-container {
+                /* padding-top: 200px; */
+                /* height: 87.5vh; */
+            }
+            .primary-button2 span {
+                position: inherit;
+                top: -8px;
+            }
+            .overflow-allow {
+                overflow: visible !important;
+                width: 95vw !important;
+            }
+            .project-block .info {
+                /* left: 40%; */
+                transform: translate(0%);
+                width: 100%;
+            }
+            .project-block .info1 {
+                left: 0%;
+            }
+            .project-listing-block .swiper-container .item .info h5 {
+                font-size: 2rem !important;
+            }
+            .swiper-grid li {
+                padding-left: 1.5rem;
+                margin: 1rem 0;
+                background-position: left 4px;
+                background-size: 7px;
+            }
+        }
+        /* Smartphones (landscape) ----------- */
+        
+        @media only screen and (min-width: 320px) and (max-width: 700px) {
+            html {
+                font-size: 6px !important;
+            }
+            body {
+                overflow-y: scroll;
+            }
+            .container-intro {
+                position: absolute;
+                top: 50vh;
+                transform: translateY(-50%);
+            }
+            .contact-container {
+                height: 1120px !important;
+                -ms-grid-columns: 1fr;
+                grid-template-columns: 1fr;
+                -ms-grid-rows: 5fr 5fr 2fr !important;
+                grid-template-rows: 5fr 5fr !important;
+            }
+            .contact-form-container {
+                height: 600px !important;
+                grid-column: 1/2 !important;
+                grid-row: 1/2 !important;
+            }
+            .contact-container .contact-form-container .form-container {
+                width: 90%;
+                height: 90%;
+                position: relative;
+                top: 20%;
+                left: 5%;
+            }
+            .column-right {
+                height: 600px !important;
+                grid-column: 1/2 !important;
+                grid-row: 2/3 !important;
+            }
+            .contact-container .footer {
+                grid-column: 1/2;
+                grid-row: 3/4;
+            }
+            .team-container {
+                height: 85vh;
+                grid-template-columns: 1fr;
+                grid-template-rows: 80px 1fr 1fr;
+            }
+            .team-container .team-heading {
+                grid-column: 1/2;
+                grid-row: 1/2;
+                text-align: center;
+                padding-top: 16rem;
+            }
+            .team-container .team-heading h1 {
+                top: 80%;
+            }
+            .team-container .team-people {
+                grid-column: 1/2;
+                grid-row: 2/3;
+                display: grid;
+                grid-template-columns: 1fr !important;
+                grid-template-rows: 1fr 0.7fr 1fr;
+                padding-top: 5rem;
+            }
+            .team-container .footer {
+                grid-column: 1/6;
+                grid-row: 4/5 !important;
+            }
+            .team-container .team-people .people-container {
+                height: 95%;
+            }
+            .team-people .card .card-body .card-title {
+                margin-bottom: 2rem;
+                font-size: 4rem;
+                font-weight: 900;
+            }
+            .team-people .card .card-body .card-text {
+                font-size: 2rem;
+            }
+            .team-container .card .card-body .card-text span {
+                font-size: 3rem;
+            }
+            .svg-block #text-canvas {
+                width: 30rem !important;
+            }
+            .slide-text2 h1 {
+                font-size: 8rem;
+            }
+            .slide-text h1 {
+                font-size: 5rem !important;
+            }
+            .revealbox h1 {
+                font-size: 3.9rem !important;
+            }
+            #section3 .layer {
+                width: 90% !important;
+                height: 22rem;
+            }
+            #section3 .social {
+                /* margin: 0 3rem !important; */
+            }
+            .project-listing-block .swiper-container {
+                /* padding-top: 380px; */
+            }
+            .slide-text {
+                padding: 1.1rem;
+            }
+            .nav-block li {
+                padding: 8px 70px;
+            }
+            .project-listing-block .swiper-container {
+                /* padding-top: 410px;
+                height: 87.5vh; */
+            }
+            .primary-button2 span {
+                position: inherit;
+                top: -8px;
+            }
+            .overflow-allow {
+                overflow: visible !important;
+                width: 95vw !important;
+            }
+            .project-block .info {
+                /* left: 40%; */
+                transform: translate(0%);
+                width: 100%;
+            }
+            .project-block .info1 {
+                left: 0%;
+            }
+            .project-listing-block .swiper-container .item .info h5 {
+                font-size: 2rem !important;
+            }
+            .swiper-grid li {
+                padding-left: 1.5rem;
+                margin: 1rem 0;
+                background-position: left 4px;
+                background-size: 7px;
+            }
+        }
+        /* Smartphones (portrait) ----------- */
+        
+        @media only screen and (max-width: 320px) and (max-width: 700px) {
+            html {
+                font-size: 6px !important;
+            }
+            body {
+                overflow-y: scroll;
+            }
+            .contact-container {
+                height: 1120px !important;
+                -ms-grid-columns: 1fr;
+                grid-template-columns: 1fr;
+                -ms-grid-rows: 5fr 5fr 2fr !important;
+                grid-template-rows: 5fr 5fr !important;
+            }
+            .contact-form-container {
+                height: 600px !important;
+                grid-column: 1/2 !important;
+                grid-row: 1/2 !important;
+            }
+            .contact-container .contact-form-container .form-container {
+                width: 90%;
+                height: 90%;
+                position: relative;
+                top: 20%;
+                left: 5%;
+            }
+            .column-right {
+                height: 600px !important;
+                grid-column: 1/2 !important;
+                grid-row: 2/3 !important;
+            }
+            .contact-container .footer {
+                grid-column: 1/2;
+                grid-row: 3/4;
+            }
+            .team-container {
+                height: 85vh;
+                grid-template-columns: 1fr;
+                grid-template-rows: 80px 1fr 1fr;
+            }
+            .team-container .team-heading {
+                grid-column: 1/2;
+                grid-row: 1/2;
+                text-align: center;
+                padding-top: 16rem;
+            }
+            .team-container .team-heading h1 {
+                top: 80%;
+            }
+            .team-container .team-people {
+                grid-column: 1/2;
+                grid-row: 2/3;
+                display: grid;
+                grid-template-columns: 1fr !important;
+                grid-template-rows: 1fr 0.7fr 1fr;
+                padding-top: 5rem;
+            }
+            .team-container .footer {
+                grid-column: 1/6;
+                grid-row: 4/5 !important;
+            }
+            .team-container .team-people .people-container {
+                height: 95%;
+            }
+            .team-people .card .card-body .card-title {
+                margin-bottom: 2rem;
+                font-size: 4rem;
+                font-weight: 900;
+            }
+            .team-people .card .card-body .card-text {
+                font-size: 2rem;
+            }
+            .team-container .card .card-body .card-text span {
+                font-size: 3rem;
+            }
+            .svg-block #text-canvas {
+                width: 30rem !important;
+            }
+            .slide-text2 h1 {
+                font-size: 8rem;
+            }
+            .slide-text h1 {
+                font-size: 7rem !important;
+            }
+            .revealbox h1 {
+                font-size: 4.5rem !important;
+            }
+            #section3 .layer {
+                width: 90% !important;
+                height: 22rem;
+            }
+            #section3 .social {
+                margin: 0 3rem !important;
+            }
+            .slide-text {
+                padding: 1.1rem;
+            }
+            .nav-block li {
+                padding: 8px 70px;
+            }
+            .project-listing-block .swiper-container {
+                /* padding-top: 410px;
+                height: 87.5vh; */
+            }
+            .primary-button2 span {
+                position: inherit;
+                top: -8px;
+            }
+            .overflow-allow {
+                overflow: visible !important;
+                width: 95vw !important;
+            }
+            .project-block .info {
+                /* left: 40%; */
+                transform: translate(0%);
+                width: 100%;
+            }
+            .project-block .info1 {
+                left: 0%;
+            }
+            .project-listing-block .swiper-container .item .info h5 {
+                font-size: 2rem !important;
+            }
+            .swiper-grid li {
+                padding-left: 1.5rem;
+                margin: 1rem 0;
+                background-position: left 4px;
+                background-size: 7px;
+            }
+        }
+        
+        @media only screen and (min-width: 400px) and (max-width: 700px) {
+            html {
+                font-size: 8px !important;
+            }
+            body {
+                overflow-y: scroll;
+            }
+            .container-intro {
+                position: absolute;
+                top: 50vh;
+                transform: translateY(-50%);
+            }
+            .contact-container {
+                height: 1120px !important;
+                -ms-grid-columns: 1fr;
+                grid-template-columns: 1fr;
+                -ms-grid-rows: 5fr 5fr 2fr !important;
+                grid-template-rows: 5fr 5fr !important;
+            }
+            .contact-form-container {
+                height: 560px !important;
+                grid-column: 1/2 !important;
+                grid-row: 1/2 !important;
+            }
+            .column-right {
+                height: 560px !important;
+                grid-column: 1/2 !important;
+                grid-row: 2/3 !important;
+            }
+            .contact-container .footer {
+                grid-column: 1/2;
+                grid-row: 3/4;
+            }
+            .team-container {
+                height: 190vh;
+                grid-template-columns: 1fr;
+                grid-template-rows: 100px 9fr 1fr;
+            }
+            .team-container .logo {
+                grid-column: 1/2;
+                grid-row: 1/2;
+            }
+            .team-container .team-heading {
+                grid-column: 1/2;
+                grid-row: 2/3;
+                text-align: center;
+                padding-top: 0;
+                /* padding-top: 16rem; */
+            }
+            .team-container .team-people {
+                grid-column: 1/2;
+                grid-row: 3/4;
+                display: grid;
+                grid-template-columns: 1fr !important;
+                grid-template-rows: 1fr 0.7fr 1fr;
+                padding-top: 0;
+            }
+            .team-container .footer {
+                grid-column: 1/2;
+                grid-row: 4/5;
+            }
+            .team-container .team-people .people-container {
+                height: 95%;
+            }
+            .team-container .team-heading h1 {
+                font-size: 5rem;
+            }
+            .team-people .card .card-body .card-title {
+                margin-bottom: 2rem;
+                font-size: 4rem;
+                font-weight: 900;
+            }
+            .team-people .card .card-body .card-text {
+                font-size: 2rem;
+            }
+            .team-container .card .card-body .card-text span {
+                font-size: 2.8rem;
+            }
+            .project-listing-block .swiper-container {
+                /* padding-top: 410px;
+                height: 87.5vh; */
+            }
+            .footer {
+                padding: 0px;
+            }
+            .primary-button2 span {
+                position: inherit;
+                top: -8px;
+            }
+            .nav-block li {
+                padding: 8px 70px;
+            }
+            .slide-text {
+                padding: 1.1rem;
+            }
+            .project-block .info {
+                /* left: 40%; */
+                transform: translate(0%);
+                width: 100%;
+            }
+            .project-block .info1 {
+                left: 0%;
+            }
+            .project-listing-block .swiper-container .item .info h5 {
+                font-size: 2rem !important;
+            }
+            .swiper-grid li {
+                padding-left: 1.5rem;
+                margin: 1rem 0;
+                background-position: left 4px;
+                background-size: 7px;
+            }
+        }
+        
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1223px) {
+            html {
+                font-size: 10px !important;
+            }
+            .team-container .team-heading h1 {
+                font-size: 4rem;
+                top: 65%;
+            }
+            .project-listing-block .swiper-container {
+                /* padding-top: 410px;
+                height: 87.5vh; */
+            }
+            .swiper-grid li {
+                padding-left: 1.5rem;
+                margin: 1rem 0;
+                background-position: left 5px;
+                background-size: 10px;
+            }
+        }
+        /* Desktops and laptops ----------- */
+        
+        @media only screen and (min-width: 1224px) {
+            html {
+                font-size: 13px !important;
+            }
+            .contact-form-container {
+                height: 100% !important;
+            }
+            .team-container .team-heading h1 {
+                font-size: 4rem;
+                top: 50%;
+            }
+            .team-people .card .card-body .card-title {
+                margin-bottom: 1rem;
+                font-size: 1.8rem;
+            }
+            .team-container .card .card-body .card-text span {
+                font-size: 1.5rem;
+            }
+            .team-people .card .card-body .card-text {
+                font-size: 1.3rem;
+                line-height: 1.5rem !important;
+            }
+            .swiper-wrapper {
+                padding-top: 20px;
+            }
+            .swiper-grid li {
+                margin: 0rem 0;
+            }
+            .swiper-grid li {
+                padding-left: 1.5rem;
+                margin: 1rem 0;
+                background-position: left 9px;
+                background-size: 12px;
+            }
+        }
+        /* Large screens ----------- */
+        
+        @media only screen and (min-width: 1824px) {
+            html {
+                font-size: 16px !important;
+            }
+            .contact-form-container {
+                height: 100% !important;
+                min-height: 995px !important;
+            }
+            .team-people .card .card-body .card-title {
+                margin-bottom: 1rem;
+                font-size: 2.5rem;
+            }
+            .team-people .card .card-body .card-text {
+                font-size: 1.6rem;
+                line-height: 1.5rem !important;
+            }
+            .team-people .card .card-body p {
+                line-height: 1.5rem !important;
+            }
+            .team-container .card .card-body .card-text span {
+                font-size: 1.8rem;
+            }
+            .project-listing-block .swiper-container {
+                /* padding-top: 380px; */
+            }
+            .project-listing-block .swiper-container .item {
+                /* height: 90%; */
+            }
+            .swiper-grid li {
+                padding-left: 1.5rem;
+                margin: 1rem 0;
+                background-position: left 5px;
+                background-size: 10px;
+            }
+        }
+        
+        @media only screen and (min-width: 3000px) {
+            .project-listing-block .swiper-container {
+                /* padding-top: 380px; */
+            }
+            .project-listing-block .swiper-container .item {
+                height: 90%;
+            }
+            .swiper-grid li {
+                padding-left: 1.5rem;
+                margin: 1rem 0;
+                background-position: left 5px;
+                background-size: 10px;
+            }
+        }
