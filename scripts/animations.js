@@ -259,6 +259,7 @@ $().ready(function () {
 
 function menushow() {
   clearInterval(menucheck);
+  document.body.classList.add("menu-open");
   //document.getElementById("menu").style.display = "block";
   $(".nav-menu").addClass("aos-animate");
   $(".nav-menu").css("pointer-events", "auto");
@@ -281,6 +282,7 @@ function menuhide() {
       $(".nav-menu").removeClass("aos-animate");
     }
   }, 50);
+  document.body.classList.remove("menu-open");
   //document.getElementById("menu").style.display = "none";
   $(".nav-menu").removeClass("aos-animate");
   $(".nav-menu").css("pointer-events", "none");

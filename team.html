@@ -65,7 +65,7 @@
         @media (max-width: 991px) {
             body {
                 overflow: auto !important;
-                height: auto !important;
+                height: 100% !important;
             }
         }
 
@@ -123,99 +123,120 @@
                 transform: none !important;
                 margin-bottom: 0 !important; /* Removed extra height */
             }
-        }
 
-        .banner {
-            display: none !important;
-            position: absolute;
-            top: 20% !important;
-            margin-left: 50%;
-            transform: translate(-50%);
-
-        }
-
-        .col-box {
-            width: 300px !important;
-            height: auto !important;
-        }
-
-        .team-pic {
-
-            width: 300px !important;
-            height: auto !important;
-
-        }
-
-        .shadowpic {
-            position: absolute;
-            width: 300px !important;
-            height: auto !important;
-
-
-        }
-
-        @media (min-width: 100px) and (max-width: 1129px) {
-            .nav-links {
-                font-size: 30px !important;
-                line-height: 5px !important;
+            .team-display-section .d-block.d-md-none {
+                line-height: 0;
             }
 
-
-        }
-
-        @media (min-width: 10px) and (max-width: 700px) {
-
-            .team-heading {
-                position: relative !important;
-                top: -900px !important;
+            .team-display-section .d-block.d-md-none img {
+                display: block;
+                margin: 0 !important;
             }
 
-
-        }
-
-        @media (min-width: 1250px) and (max-width: 1399px) {
-            #animation-container {
-                position: absolute !important;
-                top: 0% !important;
-
+            .team-display-section {
+                padding-bottom: 110px;
+                box-sizing: border-box;
             }
 
-
-        }
-
-        @media (min-width: 900px) and (max-width: 1249px) {
-            #animation-container {
-                position: absolute !important;
-                top: 13% !important;
-
+            .team-display-section .d-block.d-md-none img:last-child {
+                margin-bottom: 110px !important;
             }
 
-        }
-
-        @media (min-width: 100px) and (max-width: 900px) {
-            #animation-container {
-                display: none !important;
-
-            }
-
-            .banner {
+            #header {
                 display: block !important;
-
-
-            }
-
-            .line-block {
                 position: fixed !important;
-                top: 70% !important;
-                bottom: 50%;
-                transform: scale(2) !important;
-
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 64px;
+                z-index: 90;
+                pointer-events: none;
             }
 
-            .bottom-row {
-                bottom: 90px !important;
+            #header header {
+                height: 64px;
             }
 
+            #header .mobile-menu,
+            #header .mobile-menu-close {
+                right: 16px !important;
+                left: auto !important;
+                top: 16px !important;
+                transform: none !important;
+                pointer-events: auto;
+                width: 2.5rem;
+            }
+
+            #menu {
+                display: block !important;
+                position: fixed !important;
+                inset: 0;
+                width: 100vw;
+                height: 100vh;
+                background: rgba(0, 0, 0, 0.85) !important;
+                backdrop-filter: blur(10px);
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                z-index: 80;
+            }
+
+            #menu.aos-animate {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+            }
+
+            body.menu-open .team-display-section {
+                filter: blur(6px);
+            }
+
+            body.menu-open {
+                overflow: hidden !important;
+            }
+
+            body.menu-open .team-container footer.footer {
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            #menu .bottom-row {
+                bottom: 24px !important;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            #menu .primary-button {
+                left: auto !important;
+            }
+
+            .team-container {
+                display: block !important;
+                height: auto !important;
+            }
+
+            .team-container .logo-block,
+            .team-container #team-people {
+                display: none !important;
+            }
+
+            .team-container footer.footer {
+                position: fixed !important;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: auto !important;
+                height: auto !important;
+                max-height: none !important;
+                z-index: 40;
+            }
+
+            .team-container footer.footer .container {
+                position: static !important;
+                top: auto !important;
+                transform: none !important;
+                padding: 14px 6% !important;
+            }
         }
 
         /* @media (min-width: 100px) and (max-width: 740px) {
@@ -561,6 +582,23 @@
     </div>
 
     <script type="text/javascript" src="scripts/animations.js"></script>
+    <script>
+        (function () {
+            if (!window.menushow || !window.menuhide) return;
+            var originalMenuShow = window.menushow;
+            var originalMenuHide = window.menuhide;
+
+            window.menushow = function () {
+                document.body.classList.add("menu-open");
+                return originalMenuShow.apply(this, arguments);
+            };
+
+            window.menuhide = function () {
+                document.body.classList.remove("menu-open");
+                return originalMenuHide.apply(this, arguments);
+            };
+        })();
+    </script>
     <script>
         var container = document.getElementById("animation-container"),
             anim = lottie.loadAnimation({

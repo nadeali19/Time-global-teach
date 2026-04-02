@@ -70,6 +70,73 @@ header .mobile-menu {
     z-index: 20;
 }
 
+@media only screen and (max-width: 992px) {
+    #header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 64px;
+        z-index: 90;
+        pointer-events: none;
+    }
+
+    header .mobile-menu,
+    header .mobile-menu-close {
+        right: 16px !important;
+        left: auto !important;
+        top: 16px !important;
+        transform: none !important;
+        pointer-events: auto;
+        width: 2.5rem;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(10px);
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 220ms ease, visibility 220ms ease;
+    }
+
+    body.about-page .nav-menu,
+    body.projects-page .nav-menu,
+    body.contact-page .nav-menu {
+        background: rgba(2, 10, 25, 0.50);
+        backdrop-filter: blur(16px);
+    }
+
+    .nav-menu.aos-animate {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    body.menu-open {
+        overflow: hidden !important;
+    }
+
+    body.menu-open footer.footer {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    body.menu-open .wrapper > *:not(#menu):not(#header) {
+        filter: blur(6px);
+    }
+
+    body.menu-open > *:not(.wrapper):not(#menu):not(#header) {
+        filter: blur(6px);
+    }
+}
+
 .nav-block {
     display: flex;
     flex-direction: row;
@@ -176,8 +243,8 @@ header .mobile-menu {
 }
 
 .nav-block li a {
-    font-size: 3em;
-    line-height: 70px;
+    font-size: 2.6em;
+    line-height: 58px;
     text-transform: uppercase;
     color: #fff;
     -webkit-transition: all 1s ease-in-out;
@@ -192,7 +259,15 @@ header .mobile-menu {
 
 @media only screen and (max-width: 640px) {
     .nav-block li a {
-        font-size: 2.5em;
+        font-size: 2.2em;
+        line-height: 52px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .nav-block li a {
+        font-size: 2em;
+        line-height: 48px;
     }
 }
 
@@ -411,11 +486,7 @@ header .mobile-menu {
 }
 
 .menu-block .bottom-row {
-    height: 100px;
-    width: 100%;
-    bottom: 20px;
-    position: absolute;
-    display: block;
+    display: none !important;
 }
 
 footer ul.list-inline {
